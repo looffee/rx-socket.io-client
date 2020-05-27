@@ -1,0 +1,15 @@
+{
+  "extends": "./../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./../dist/specs/",
+    "rootDir": "./",
+    "allowJs": true,
+    "checkJs": true,
+    "types": [
+      "jest",
+      "node"
+    ],
+  },
+  "include": ["**/*.spec.js"],
+}
