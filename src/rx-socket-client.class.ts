@@ -164,15 +164,6 @@ export class RxSocketClient {
               console.log(`RxSocketClient::emit: "${action}" response`, response);
             }
 
-            // TODO: make error predication function
-            // if (
-            //   typeof response === 'object' &&
-            //   !!response &&
-            //   'errorId' in response
-            // ) {
-            //   observer.error(response);
-            //   return;
-            // }
             if (this.errorPredicationCallback(response)) {
               observer.error(response);
               return;

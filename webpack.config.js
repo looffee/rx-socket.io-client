@@ -29,6 +29,7 @@ module.exports = env => {
     },
     resolve: {
       extensions: [ '.tsx', '.ts', '.js' ],
+      // TODO
       // alias: {
       //   'rxjs/operators': 'rxjs',
       // },
