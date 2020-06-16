@@ -47,7 +47,7 @@ module.exports = env => {
       },
       'rxjs': 'rxjs',
       'rxjs/operators': {
-        root: 'rxjs.operators',
+        root: ['rxjs', 'operators'],
         commonjs: 'rxjs/operators',
         commonjs2: 'rxjs/operators',
         amd: 'rxjs/operators',
