@@ -11,6 +11,7 @@ import {
   map,
   flatMap,
   distinctUntilChanged,
+  take,
 } from 'rxjs/operators';
 import * as io from 'socket.io-client';
 
@@ -175,7 +176,8 @@ export class RxSocketClient {
         );
     });
 
-    return this.#mergeWithSocketCloseEvent(responseObs);
+    return this.#mergeWithSocketCloseEvent(responseObs)
+      .pipe(take(1));
   }
 
   listen<T>(action: string): Observable<T> {
